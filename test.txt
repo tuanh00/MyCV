@@ -1,0 +1,26 @@
+interface IProps {
+    name?: string;
+    age?: number;
+    address?: string;
+}
+
+const Video14 = (props: IProps) {
+    const {name = "default", age = 23, address = "default address"} = props;
+
+}
+
+interface IProps2 {
+    defaultName: string;
+    age: number | string;
+}
+const Video10 = (props: IProps2) => {
+const {defaultName = "dName", defaultAge = ""} = props
+}
+
+const [name, setState] = useState<string>(defaultName);
+const [age, setAge] = us State<number | string>(defaultAge)
+
+
++ when using prop of component, you forgot name of each prop'
+Ctrl + Space + for recommendation of props
++ tracing source code of useState: Click and hold Ctrl then click
