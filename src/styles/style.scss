@@ -3532,3 +3532,17 @@ img.svg {
         padding: 94px 0px 48px 0px;
     }
 }
+
+.responsive-img {
+    max-width: 18%;
+    margin: 2%;
+    height: auto;
+    display: block;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    flex-wrap: wrap; // Optional: in case of too many items, they will wrap into the next line
+    
+  }

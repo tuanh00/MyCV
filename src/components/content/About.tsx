@@ -47,39 +47,32 @@ const About = () => {
                           </h4>
                           </div>
                           <div className="definition">
-                            <p>Hi! My name is <strong>Tu Anh</strong>. I am a Web Developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration to concept and execution, but I find the most satisfaction in seeing the finished product do everything for you that it was created to do.</p>
+                            <p>Hi! My name is <strong>Tu Anh</strong>. I am a trainee developer passionate about creating functional and visually appealing web solutions. I'm pursuing a DEC in Computer Science Technology and will graduate in May 2025. I'm actively seeking a front-end development internship for Winter 2025.
+                            <br/><br/>
+
+                            For front-end development, I work with libraries like <strong>React</strong>, frameworks like <strong>Bootstrap</strong>, and for styling such as <strong>SCSS</strong> and <strong>CSS</strong>. I also use tools like <strong>Vite, Figma, and Draw.io</strong> for design and prototyping.
+
+On the back-end, I have hands-on experience with programming languages like <strong>C#, Java, and Javascript</strong> and I also work with <strong>Node.js</strong>. For database management, I utilize <strong>SQL Server, MySQL, and Oracle</strong>. I use tools such as <strong>Git</strong> for version control and <strong>Swagger UI</strong> for testing RESTful APIs.
+<br/><br/>
+I'm always looking to enhance my skills and would love to contribute to a team where I can bring both creativity and technical expertise.</p>
                           </div>
                           <div className="about_short_contact_wrap">
                             <ul>
                               <li>
-                                <span><label>Birthday:</label> 01.07.1990</span>
+                                <span><label>City:</label> Montreal, QC
+                                </span>
                               </li>
                               <li>
-                                <span><label>Age:</label> 28</span>
+                                <span><label>Study:</label> LaSalle College</span>
                               </li>
-                              <li>
-                                <span><label>City:</label> New York, USA</span>
-                              </li>
-                              <li>
-                                <span><label>Interests:</label> Soccer, UFC</span>
-                              </li>
-                              <li>
-                                <span><label>Study:</label> Chicago University</span>
-                              </li>
-                              <li>
-                                <span><label>Degree:</label> Master</span>
-                              </li>	
                               <li>
                                 <span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
                               </li>
                               <li>
-                                <span><label>Mail:</label> <a href="mailto:example@gmail.com">mymail&#64;gmail.com</a></span>
+                                <span><label>Mail:</label> <a href="mailto:chtuanh@gmail.com">chtuanh&#64;gmail.com</a></span>
                               </li>
                               <li>
-                                <span><label>Phone:</label> <a href="#">+77 022 177 05 05</a></span>
-                              </li>
-                              <li>
-                                <span><label>Twitter:</label> <a href="#">&#64;myusername</a></span>
+                                <span><label>LinkedIn:</label> <a href="https://www.linkedin.com/in/huynh-tu-anh-chau-8a4a251a8/" target="_blank">huynh-tu-anh-chau</a></span>
                               </li>
                             </ul>
                           </div>
