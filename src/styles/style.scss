@@ -484,10 +484,12 @@ img.svg {
             ul {
                 margin: 0px;
                 list-style-type: none;
+               
 
                 li {
                     margin: 0px 10px 0px 0px;
                     display: inline-block;
+
 
                     &:last-child {
                         margin-right: 0px;
@@ -503,8 +505,13 @@ img.svg {
                         transition: all .3s ease;
 
                         &:hover {
-                            color: $color_3;
+                            opacity: .7;
                         }
+
+                        svg {
+                            width: 25px; // Adjust this to control icon size
+                            height: 25px;
+                          }
                     }
                 }
             }

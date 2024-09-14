@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 const About = () => {
     return (
         <>
-         <div className="arlo_tm_section relative" id="about">
+         <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100}}>
                 <div className="arlo_tm_about_wrapper_all">
                   <div className="container">
                     <div className="arlo_tm_title_holder">
@@ -19,7 +19,10 @@ const About = () => {
                           <a href="https://github.com/tuanh00/" target="_blank" rel="noopener noreferrer">
                             <div className="image layer" data-depth="0.1">
                                 <img src="img/about/550x640.jpg" alt="550x640" />
-                                <div className="inner" data-img-url={githubLogo}></div>
+                                <div className="inner" data-img-url={githubLogo}
+                                
+                                style={{backgroundImage: `url(${githubLogo})`}}
+                                ></div>
                             </div>
                             </a>
                             <div className="border layer" data-depth="0.2">
