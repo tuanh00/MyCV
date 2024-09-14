@@ -34,14 +34,14 @@ const Portfolio = () => {
          {/* <!-- LEFTPART --> */}
         <LeftPart
           hideLeftPart={hideLeftPart}
-          sethideLeftPart={setHideLeftPart}
+          setHideLeftPart={setHideLeftPart}
           />
          {/* <!-- /LEFTPART --> */}
           
          {/* <!-- RIGHTPART --> */}
          <RightPart
           hideLeftPart={hideLeftPart}
-          sethideLeftPart={setHideLeftPart}
+          setHideLeftPart={setHideLeftPart}
          />
          {/* <!-- /RIGHTPART --> */}
           

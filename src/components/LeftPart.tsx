@@ -4,7 +4,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 
 interface IProps {
     hideLeftPart: boolean;
-    sethideLeftPart: (value: boolean) => void;
+    setHideLeftPart: (value: boolean) => void;
 }
 
 const LeftPart = (props: IProps) => {
@@ -43,7 +43,7 @@ const LeftPart = (props: IProps) => {
               <a 
               className={props.hideLeftPart ? "arlo_tm_resize opened" : "arlo_tm_resize"}
               href="#"
-              onClick={() => props.sethideLeftPart(!props.hideLeftPart)}>
+              onClick={() => props.setHideLeftPart(!props.hideLeftPart)}>
                 <i className={props.hideLeftPart ? "xcon-angle-left opened" : "xcon-angle-left"}></i>
               </a>
             </div>

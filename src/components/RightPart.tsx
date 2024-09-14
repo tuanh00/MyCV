@@ -6,7 +6,7 @@ import Skill from "./content/Skill";
 
 interface IProps {
   hideLeftPart: boolean;
-  sethideLeftPart: (value: boolean) => void;
+  setHideLeftPart: (value: boolean) => void;
 }
 
 const RightPart = (props: IProps) => {

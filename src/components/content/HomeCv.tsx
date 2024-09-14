@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-
+import myAvatar from '@/assets/img/hero/img.png'
 const HomeCv = () => {
   const handleScrollToAbout = () => {
       const section = document.querySelector("#about")
@@ -20,7 +20,7 @@ const HomeCv = () => {
                     <div className="content hero">
                       <div className="inner_content">
                         <div className="image_wrap">
-                          <img src="img/hero/img.png" alt="hero" />
+                          <img src={myAvatar} alt="My Avatar" />
                         </div>
                         <div className="name_holder">
                           <h3>Huynh Tu Anh <span>Chau</span></h3>
