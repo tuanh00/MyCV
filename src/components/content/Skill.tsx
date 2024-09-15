@@ -8,13 +8,17 @@ const Skill = () => {
             {/* -----skill_1----- */}
                 <div className="arlo_tm_skills_wrap">
                   <div className="container">
+                  <div className="arlo_tm_title_holder">
+                      <h3>Technical Skills</h3>
+                      {/* <span>Main informations about me</span> */}
+                    </div>
                     <div className="inner_wrap">
                       <div className="leftbox">
                         <div className="arlo_tm_mini_title_holder">
                           <h4>Front-end Skills</h4>
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply.</p>
-                      </div>
+                        <p>For the front-end, HTML and CSS provided a solid foundation for kick-starting my journey into web development.<br/><br/> Moving forward, I used Vite and React to streamline the development process, making it easier to collaborate with teammates and build efficient applications. <br/><br/>Additionally, Figma has been invaluable in allowing me to deliver clear visual designs that align with customer expectations.</p>                   
+                          </div>
                       <div className="rightbox">
                         <div className="progress_bar_wrap_total">
                           <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
@@ -83,7 +87,7 @@ const Skill = () => {
                         <div className="arlo_tm_mini_title_holder">
                           <h4>Back-end Skills</h4>
                         </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply.</p>
+                        <p>On the back-end, I leverage logic-based languages to handle complex functionalities and use tools like SQL to store and manage data efficiently.<br/><br/>Git helps me track and preserve project versions, ensuring smooth collaboration across teams.<br/><br/>For API documentation and management, Swagger allows me to maintain organized endpoints, ensuring integration for development teams.</p>
                       </div>
                       <div className="rightbox">
                         <div className="progress_bar_wrap_total">

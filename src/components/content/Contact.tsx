@@ -5,7 +5,7 @@ const Contact = () => {
                 <div className="container">
                   <div className="arlo_tm_title_holder contact">
                     <h3>Contact Me</h3>
-                    <span>Get in touch with me</span>
+                    {/* <span>Get in touch with me</span> */}
                   </div>
                 </div>
                 <div className="arlo_tm_footer_contact_wrapper_all">

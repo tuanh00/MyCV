@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import desktopLogo from '@/assets/img/logo/atom.png'
+import desktopLogo from '@/assets/img/logo/CVLogo_100x100.jpg'
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import {isMobile} from 'react-device-detect';
+import { GrReactjs } from "react-icons/gr";
+
 
 interface IProps {
     hideLeftPart: boolean;
@@ -46,7 +48,8 @@ const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, M
           <div className={props.hideLeftPart ? "arlo_tm_leftpart_wrap opened" : "arlo_tm_leftpart_wrap"}>
             <div className="leftpart_inner">
               <div className="logo_wrap">
-                <a href="#"><img src={desktopLogo} alt="desktop-logo" style={{height: 150, width: 180}} /></a>
+                {/* <a href="#"><img src={desktopLogo} alt="desktop-logo" style={{height: 150, width: 180}} /></a> */}
+                <a href="#"><GrReactjs /></a>
               </div>
               <div className="menu_list_wrap">
                 <ul className="anchor_nav">

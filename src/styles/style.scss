@@ -392,6 +392,18 @@ img.svg {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+
+
+        a {
+            svg {
+                color:#d1d7db;
+                width: 100px;
+                height: 100px;
+
+            }
+        }
+        
+        
     }
 
     .menu_list_wrap {
@@ -3049,6 +3061,20 @@ img.svg {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+
+        .logo {
+            display: flex; /* Flexbox to ensure centering */
+            align-items: center; /* Centers the logo vertically */
+            a {
+                display: inline-flex;
+                
+                svg {
+                    color:#d1d7db;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
     }
 }
 

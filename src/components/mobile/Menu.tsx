@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import imgMobileLogo from '@/assets/img/logo/mobile_logo.png';
+import { GrReactjs } from "react-icons/gr";
 
 const MobileMenu = () => {
 
@@ -30,7 +30,8 @@ const MobileMenu = () => {
          <div className="arlo_tm_mobile_header_wrap">
           <div className="main_wrap">
             <div className="logo">
-              <a href="#"><img src={imgMobileLogo} alt="mobile_logo" /></a>
+              {/* <a href="#"><img src={imgMobileLogo} alt="mobile_logo" /></a> */}
+              <a href="#"><GrReactjs /></a>
             </div>
             <div className="arlo_tm_trigger ">
                         <div
