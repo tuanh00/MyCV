@@ -13,8 +13,10 @@
     "@ramonak/react-progress-bar": "5.0.3",
     "antd": "5.4.6",
     "devicon": "^2.16.0",
+    "parallax-js": "3.1.0",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
+    "react-device-detect": "2.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
     "react-type-animation": "3.0.1",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "18.16.1",
+    "@types/parallax-js": "^3.1.0",
     "@types/path-browserify": "^1.0.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import desktopLogo from '@/assets/img/logo/atom.png'
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
+import {isMobile} from 'react-device-detect';
 
 interface IProps {
     hideLeftPart: boolean;
@@ -12,6 +13,21 @@ const LeftPart = (props: IProps) => {
 
 const [activeTab, setActiveTab] = useState<string>('home');
 
+useEffect(() => {
+  const { hash } = window.location;
+  if(hash) {
+    const tab = hash.replace('#', '');
+    setActiveTab(tab);
+
+    const section = document.querySelector(`${hash}`);
+    if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  
+    }
+  }
+
+}, [])
+
 const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   event.preventDefault();
     setActiveTab(tab);
@@ -19,6 +35,9 @@ const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, M
     const section = document.querySelector(`#${tab}`);
       if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => {
+        window.location.hash = tab;
+      }, 1000)
       }
 }
 
@@ -73,12 +92,22 @@ const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, M
                   </ul>
                 </div>
               </div>
+              {!isMobile &&
               <a 
               className={props.hideLeftPart ? "arlo_tm_resize opened" : "arlo_tm_resize"}
               href="#"
-              onClick={() => props.setHideLeftPart(!props.hideLeftPart)}>
-                <i className={props.hideLeftPart ? "xcon-angle-left opened" : "xcon-angle-left"}></i>
+              onClick={(e) =>  
+              {
+                e.preventDefault();
+                props.setHideLeftPart(!props.hideLeftPart)
+              }
+              }
+              >
+
+                <i className={props.hideLeftPart ? "xcon-angle-left opened" : "xcon-angle-left"}>
+                </i>
               </a>
+              }
             </div>
           </div>
         </>
