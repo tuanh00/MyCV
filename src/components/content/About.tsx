@@ -84,7 +84,7 @@ I'm always looking to enhance my skills and would love to contribute to a team w
                                 <span><label>Study:</label> LaSalle College</span>
                               </li>
                               <li>
-                                <span><label>Website:</label> <a href="https://github.com/tuanh00/cv/" target="_blank">https://github.com/tuanh00/cv</a></span>
+                                <span><label>Website:</label> <a href="https://github.com/tuanh00/portfolio/" target="_blank">https://github.com/tuanh00/portfolio</a></span>
                               </li>
                               <li>
                                 <span><label>Mail:</label> <a href="mailto:chtuanh@gmail.com">chtuanh&#64;gmail.com</a></span>
