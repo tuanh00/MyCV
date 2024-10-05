@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import githubLogo from '@/assets/img/about/github.png';
-import myCV from '@/assets/Huynh-Tu-Anh-Chau-CV.pdf';
+import myCV from '@/assets/Huynh_Tu_Anh_Chau_CV.pdf';
 import { TypeAnimation } from "react-type-animation";
 import Parallax from 'parallax-js';
 import logo550 from '@/assets/img/about/550x640.jpg';
@@ -84,7 +84,7 @@ I'm always looking to enhance my skills and would love to contribute to a team w
                                 <span><label>Study:</label> LaSalle College</span>
                               </li>
                               <li>
-                                <span><label>Website:</label> <a href="https://github.com/tuanh00/cv/" target="_blank">https://github.com/tuanh00/cv/</a></span>
+                                <span><label>Website:</label> <a href="https://github.com/tuanh00/cv/" target="_blank">https://github.com/tuanh00/cv</a></span>
                               </li>
                               <li>
                                 <span><label>Mail:</label> <a href="mailto:chtuanh@gmail.com">chtuanh&#64;gmail.com</a></span>

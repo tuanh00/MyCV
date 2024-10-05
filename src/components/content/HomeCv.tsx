@@ -5,6 +5,7 @@ const HomeCv = () => {
       const section = document.querySelector("#about")
       if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+      
       }
   
 }
