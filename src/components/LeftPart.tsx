@@ -88,7 +88,7 @@ const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, M
                       </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/huynh-tu-anh-chau-8a4a251a8/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/huynh-tu-anh-chau/" target="_blank" rel="noopener noreferrer">
                       <FaLinkedinIn/>
                       </a>
                     </li>
@@ -106,7 +106,6 @@ const handleClickTab = (tab: string, event:React.MouseEvent<HTMLAnchorElement, M
               }
               }
               >
-
                 <i className={props.hideLeftPart ? "xcon-angle-left opened" : "xcon-angle-left"}>
                 </i>
               </a>

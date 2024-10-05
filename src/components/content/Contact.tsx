@@ -18,7 +18,7 @@ const Contact = () => {
                         <div className="short_info_wrap">
                           <ul>
                             <li><p><label>Email:</label><span><a href="mailto:chtuanh@gmail.com">chtuanh@gmail.com</a></span></p></li>
-                            <li><p><label>Website:</label><span><a href="https://github.com/tuanh00/portfolio/" target="_blank">https://github.com/tuanh00/portfolio</a></span></p></li>
+                            <li><p><label>Website:</label><span><a href="https://tuanh00.github.io/portfolio/" target="_blank">https://tuanh00.github.io/portfolio/</a></span></p></li>
                           </ul>
                         </div>
                       </div>
