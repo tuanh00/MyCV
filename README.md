@@ -30,7 +30,7 @@ To get this project up and running:
 3. **Open the folder in Visual Studio Code**.
 4. **Open a new terminal** in VSCode.
 5. Run `'npm i'` to download `node_modules`. Wait for the installation to complete.
-6. Run either `'npm run preview'` (for production) or `'npm start'` (for development), and check the terminal for the local port, for example `http://127.0.0.1:4173/cv/` or `http://127.0.0.1:5174/cv/`.
+6. Run either `'npm run preview'` (for production) or `'npm start'` (for development), and check the terminal for the local port, for example `http://127.0.0.1:4173/portfolio/` or `http://127.0.0.1:5174/portfolio/`.
 
 Once you see the local port running, open it in your browser to view the project.
 
