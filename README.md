@@ -15,7 +15,7 @@ This project uses:
 - **Parallax.js** for adding simple parallax effects, creating engaging user interactions.
 
 You can view the live demo of the project here:  
-🔗 [Live Demo](https://tuanh00.github.io/cv/)
+🔗 [Live Demo](https://portfolio-tuanh.vercel.app/)
 
 ## 🚀 Deployment
 
@@ -66,6 +66,53 @@ You can check and install Node.js from [here](https://nodejs.org/en/download).
 - **Customizable**: Easily adaptable to include new sections or components.
 - **Fast Load Times**: Thanks to Vite’s optimized build process.
 
-## 👥 Contributing
+# Desktop Views
 
-If you find a bug or have suggestions for improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
+Here are the desktop views of the project:
+### Home View
+<img src="./desktop_imgs/Home_View_1.png" alt="Home View 1" width="500px"/>
+
+### Home View with Sidebar
+<img src="./desktop_imgs/Home_View_2.png" alt="Home View 2" width="500px"/>
+
+### About View
+<img src="./desktop_imgs/About_View.png" alt="About View" width="500px"/>
+
+### Skill View
+<img src="./desktop_imgs/Skill_View.png" alt="Skill View" width="500px"/>
+
+### Project View
+<img src="./desktop_imgs/Project_View_1.png" alt="Project View 1" width="500px"/>
+
+### Project View with pop-ups
+<img src="./desktop_imgs/Project_View_2.png" alt="Project View 2" width="500px"/>
+
+### Contact View
+<img src="./desktop_imgs/Contact_View.png" alt="Contact View" width="500px"/>
+
+---
+
+# Mobile Views
+
+Here are the mobile views of the project:
+### Home View
+<img src="./mobile_imgs/Home_View_1.png" alt="Home View 1" width="250px"/>
+
+### Home View with Sidebar
+<img src="./mobile_imgs/Home_View_2.png" alt="Home View 2" width="250px"/>
+
+### About View
+<img src="./mobile_imgs/About_View.png" alt="About View" width="250px"/>
+
+### Skill View
+<img src="./mobile_imgs/Skill_View.png" alt="Skill View" width="250px"/>
+
+### Project View 1
+<img src="./mobile_imgs/Project_View_1.png" alt="Project View 1" width="250px"/>
+
+### Project View with pop-ups
+<img src="./mobile_imgs/Project_View_2.png" alt="Project View 2" width="250px"/>
+
+### Contact View
+<img src="./mobile_imgs/Contact_View.png" alt="Contact View" width="250px"/>
+
