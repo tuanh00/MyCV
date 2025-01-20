@@ -33,11 +33,9 @@ $border-bottom-color_1: #fff;
 
 /*@charset "utf-8";*/
 /*
-/*	Copyright (c) 2018 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-
-
+/*	
+/*	
+/*	
 	01) ARLO BASE
 	02) ARLO CONTENT
 	03) ARLO ABOUT
@@ -1423,10 +1421,15 @@ img.svg {
     }
 }
 
+  .skill_description strong {
+    color: #E3872D;
+  }
+
 .arlo_tm_mini_title_holder.contact {
     h4 {
         margin-bottom: 30px;
     }
+
 }
 
 .arlo_tm_services_wrap {
