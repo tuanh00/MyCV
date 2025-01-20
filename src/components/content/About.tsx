@@ -83,9 +83,9 @@ I'm always looking to enhance my skills and would love to contribute to a team w
                               <li>
                                 <span><label>Study:</label> LaSalle College</span>
                               </li>
-                              <li>
+                              {/* <li>
                                 <span><label>Website:</label> <a href="https://tuanh00.github.io/portfolio/" target="_blank">Check Portfolio</a></span>
-                              </li>
+                              </li> */}
                               <li>
                                 <span><label>Mail:</label> <a href="mailto:chtuanh@gmail.com">chtuanh&#64;gmail.com</a></span>
                               </li>
