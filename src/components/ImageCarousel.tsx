@@ -111,12 +111,11 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
         </>
       )}
 
-     <style>{`
-  /* Smaller, responsive container — works for both orientations */
+<style>{`
   .ic-wrap {
     position: relative;
     width: 100%;
-    height: clamp(220px, 40vh, 480px); /* <= was aspect-ratio:16/9 */
+    height: clamp(220px, 40vh, 480px); /* responsive box that works for portrait/landscape */
     border-radius: 12px;
     overflow: hidden;
     background: #0f172a0d;
@@ -127,12 +126,18 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
   .ic-track { display:flex; height:100%; transition:transform .3s ease; }
   .ic-slide { min-width:100%; height:100%; display:grid; place-items:center; background:#1118270d; }
 
-  /* Let the image size to container height, maintaining aspect ratio */
-  .ic-slide img { width: auto; height: 100%; max-height: 100%; object-fit: contain; }
+  /* <-- KEY FIX for iOS Safari */
+  .ic-slide img {
+    display:block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;           /* allow natural sizing */
+    height: auto;          /* avoid Safari collapsing width to 0 */
+    object-fit: contain;   /* keep aspect ratio, no cropping */
+  }
 
   .ic-empty { color:#6b7280; font-size:.95rem; }
 
-  /* Fix invalid rgba values (need decimals) */
   .ic-arrow {
     position:absolute; top:50%; transform:translateY(-50%);
     width:36px; height:36px; border:none; border-radius:999px;

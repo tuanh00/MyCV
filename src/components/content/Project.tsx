@@ -359,7 +359,8 @@ const Project = () => {
         onOk={() => handleCloseModal()}
         onCancel={() => handleCloseModal()}
         footer={null}
-        maskClosable={false}
+        maskClosable={true}
+        keyboard={true}        // allow ESC to close too
       >
         <ImageCarousel
           images={dataDetails?.images ?? []}
