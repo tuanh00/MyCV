@@ -3581,3 +3581,42 @@ img.svg {
     flex-wrap: wrap; // Optional: in case of too many items, they will wrap into the next line
     
   }
+/* Make the projects grid consistent */
+.list_wrap ul li .inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Thumbnail block on the card */
+.list_wrap ul li .inner .thumb {
+  width: 100%;
+  aspect-ratio: 16/9;         /* keeps cards aligned even with different images */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6f7f9;
+  margin-bottom: 12px;
+}
+.list_wrap ul li .inner .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* nice crop for mixed orientations on the CARD */
+}
+
+/* Title: 2-line clamp so heights stay uniform even with long names */
+.list_wrap ul li .inner .title_service h3 {
+  line-height: 1.25;
+  min-height: 2.5em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* We removed the description in JSX, but this ensures old markup won’t show */
+.list_wrap ul li .inner .text { display: none; }
+
+/* Modal width on small screens */
+.project-modal .ant-modal {
+  width: min(92vw, 900px) !important;
+  max-width: 900px;
+}
