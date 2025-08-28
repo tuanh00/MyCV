@@ -1102,7 +1102,9 @@ img.svg {
 
 .arlo_tm_title_holder.contact {
     padding-bottom: 93px;
+
 }
+
 
 .arlo_tm_about_wrapper_all {
     width: 100%;
@@ -1117,7 +1119,6 @@ img.svg {
     height: auto;
     clear: both;
     float: left;
-    background-color: $background-color_1;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3712,3 +3713,46 @@ img.svg {
   .skills-mindmap .mm-center::after { left: 10px; right: 10px; } /* keep spine visible on small screens */
 }
 
+/* Certifications (force images to fit the box) */
+#certifications {
+    padding-bottom: clamp(56px, 8vw, 120px);
+
+  .cert-slider { width: 100%; margin: 0 auto; }
+
+  /* The box height – tweak the numbers to taste */
+  .ic-wrap {
+    height: clamp(280px, 45vw, 360px);  /* smaller on phones, not huge on desktop */
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  /* Make percent heights resolvable */
+  .ic-viewport { height: 100%; display: flex; }
+
+  /* Each slide fills the box and centers its content */
+  .ic-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 36px;               /* room for arrows; adjust if needed */
+    box-sizing: border-box;
+  }
+
+  /* Image scales down to fit, never overflows */
+  .ic-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;          /* override any global img width rules */
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    border-radius: 8px;
+  }
+
+  /* dots spacing (optional) */
+  .ic-dots { margin-top: 8px; }
+}

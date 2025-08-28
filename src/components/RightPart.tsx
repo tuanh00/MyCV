@@ -3,6 +3,7 @@ import Contact from "./content/Contact";
 import HomeCv from "./content/HomeCv";
 import Project from "./content/Project";
 import Skill from "./content/Skill";
+import Certification from "./content/Certification";
 
 interface IProps {
   hideLeftPart: boolean;
@@ -29,8 +30,11 @@ const RightPart = (props: IProps) => {
              {/* <!-- PROJECTS --> */}
             <Project/>
              {/* <!-- PROJECTS --> */}
-          
-                
+
+             {/* <!-- CERTIFICATIONS --> */}
+            <Certification/>
+             {/* <!-- /CERTIFICATIONS --> */}
+
              {/* <!-- CONTACT & FOOTER --> */}
             <Contact/>
              {/* <!-- /CONTACT & FOOTER --> */}

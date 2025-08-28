@@ -69,6 +69,11 @@ const MobileMenu = () => {
                         Projects</a>
                   </li>
                   <li><a 
+                      href="#certifications" className={activeTab === 'certifications' ? "active" : ""}
+                      onClick={(event:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('certifications', event)}>
+                        Certifications</a>
+                  </li>
+                  <li><a 
                       href="#contact" className={activeTab === 'contact' ? "active" : ""}
                       onClick={(event:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('contact', event)}>
                         Contact</a>
