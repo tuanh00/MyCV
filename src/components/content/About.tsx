@@ -117,7 +117,7 @@ const About = () => {
                           </a>
                         </span>
                       </li>
-                      <li>
+                      {/* <li>
                         <span>
                           <label>LinkedIn:</label>{" "}
                           <a
@@ -127,7 +127,7 @@ const About = () => {
                             Check Linkedin
                           </a>
                         </span>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <div className="buttons_wrap">
