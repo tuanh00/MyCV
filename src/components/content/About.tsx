@@ -76,8 +76,8 @@ const About = () => {
                   </div>
                   <div className="definition">
                     <p className="about-intro">
-                      Junior developer focused on React/TypeScript and Java/C#
-                      backends. Graduating May 2025 and open to full-time roles.
+                      Junior developer skilled in React/TypeScript and Java/C#
+                      backends. Completed degree in May 2025, now pursuing full-time roles.
                     </p>
                     <ul className="about-points">
                       <li>
