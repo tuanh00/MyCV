@@ -81,8 +81,7 @@ const About = () => {
                     </p>
                     <ul className="about-points">
                       <li>
-                        Happy to contribute as Front-end, Full-stack, or Mobile
-                        (iOS).
+                        Happy to contribute as Full-stack or Mobile (Android, iOS).
                       </li>
                       <li>
                         Fast learner — if a skill isn’t in my portfolio yet, I’m
