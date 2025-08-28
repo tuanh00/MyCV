@@ -50,6 +50,7 @@ const Skill = () => {
               <div className="mm-chips">
                 <span>SQL Server</span>
                 <span>MySQL</span>
+                <span>MongoDB</span>
                 <span>Oracle</span>
                 <span>Firebase (Auth/Firestore/Storage)</span>
               </div>

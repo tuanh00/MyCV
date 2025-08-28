@@ -70,6 +70,20 @@ import l7 from "@/assets/img/project/lasappetite/7.jpg";
 import l8 from "@/assets/img/project/lasappetite/8.jpg";
 import l9 from "@/assets/img/project/lasappetite/9.jpg";
 import l10 from "@/assets/img/project/lasappetite/10.jpg";
+// --- EduF8 (Node/Express/MongoDB + Handlebars) screenshots --- //  NEW
+import eduCreateNewCourse from "@/assets/img/project/eduf8/CreateNewCourse.png";
+import eduEditExistingCourse from "@/assets/img/project/eduf8/EditExistingCourse.png";
+import eduHomeNoCourses from "@/assets/img/project/eduf8/Home_NoCourses.png";
+import eduHomeWithCourses from "@/assets/img/project/eduf8/HomeWithCourses.png";
+import eduMongoDBData from "@/assets/img/project/eduf8/MongoDBDBData.png"; // if your file is "MongoDBData.png", use that exact name
+import eduShowCourseDetails from "@/assets/img/project/eduf8/ShowCourseDetails.png";
+// ---- Lotto OOP CSharp ----
+import lotto1 from "@/assets/img/project/lotto/1.png";
+import lotto2 from "@/assets/img/project/lotto/2.png";
+import lotto3 from "@/assets/img/project/lotto/3.png";
+import lotto4 from "@/assets/img/project/lotto/4.png";
+import lotto5 from "@/assets/img/project/lotto/5.png";
+import lotto6 from "@/assets/img/project/lotto/6.png";
 
 interface IProject {
   image: JSX.Element;
@@ -221,6 +235,37 @@ const Project = () => {
       },
     },
     {
+    image: <FaReact size={50} color={"#E2872D"} />, // won’t show when a cover image exists
+    title: "EduF8 – Course Manager NodeJS",
+    shortDescription:
+      "CRUD course manager using Express + Handlebars, MongoDB/Mongoose, and clean SCSS.",
+    images: [
+      eduHomeWithCourses,
+      eduHomeNoCourses,
+      eduCreateNewCourse,
+      eduEditExistingCourse,
+      eduShowCourseDetails,
+      eduMongoDBData,
+    ],
+    details: {
+      description:
+        "EduF8 is a small CMS to create, edit, list, and view course details. Built with Express, Handlebars templates, and MongoDB via Mongoose. Includes soft delete/restore, method override for REST-like forms, and clean SCSS. Screens show home states, create/edit flows, details view, and underlying Mongo data.",
+      frontend: ["Handlebars", "JavaScript", "SCSS"],
+      backend: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "express-handlebars",
+        "method-override",
+      ],
+      member: 1,
+      role: "Fullstack Developer",
+      demo: "https://drive.google.com/file/d/1Kjzdg5vQeJprK7WxxO76jTRD4vc09NlS/view?usp=sharing",
+      github: "https://github.com/tuanh00/nodejs_blog",
+    },
+  },
+    {
       image: <FaPhp size={50} color={"#E2872D"} />,
       title: "Educational Game Platform",
       shortDescription:
@@ -296,6 +341,23 @@ const Project = () => {
           "",
       },
     },
+      {
+    image: <PiFileCSharp size={50} color={"#E2872D"} />,
+    title: "OOP Multi-Form WinForms Project",
+    shortDescription:
+      "C# WinForms desktop app featuring IP validation, calculators, lotto number generators, money exchange, and temperature conversion.",
+    images: [lotto1, lotto2, lotto3, lotto4, lotto5, lotto6],
+    details: {
+      description:
+        "C# WinForms app with modules for IP validation, calculator, lotto generators, currency exchange, and temperature conversion. Showcases OOP design, regex, file I/O, error handling, and UI navigation.",
+      frontend: ["WinForms (C#)"],
+      backend: ["C#", "OOP principles", "Regex", "FileStream (binary/text)"],
+      member: 1,
+      role: "Fullstack (Desktop) Developer",
+      demo: "", // no video/demo provided
+      github: "", // if you upload later, paste link here
+    },
+  },
     {
       image: <FaJava size={50} color={"#E2872D"} />,
       title: "Cinema Management System",
