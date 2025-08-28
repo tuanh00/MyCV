@@ -9,6 +9,7 @@ const certImages = Object.values(
   })
 ) as string[];
 
+//Cerf
 const Certification: React.FC = () => {
   return (
     <div className="arlo_tm_section" id="certifications">

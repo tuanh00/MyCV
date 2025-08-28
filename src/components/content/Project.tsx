@@ -70,12 +70,12 @@ import l7 from "@/assets/img/project/lasappetite/7.jpg";
 import l8 from "@/assets/img/project/lasappetite/8.jpg";
 import l9 from "@/assets/img/project/lasappetite/9.jpg";
 import l10 from "@/assets/img/project/lasappetite/10.jpg";
-// --- EduF8 (Node/Express/MongoDB + Handlebars) screenshots --- //  NEW
+// --- EduF8 (Node/Express/MongoDB + Handlebars)
 import eduCreateNewCourse from "@/assets/img/project/eduf8/CreateNewCourse.png";
 import eduEditExistingCourse from "@/assets/img/project/eduf8/EditExistingCourse.png";
 import eduHomeNoCourses from "@/assets/img/project/eduf8/Home_NoCourses.png";
 import eduHomeWithCourses from "@/assets/img/project/eduf8/HomeWithCourses.png";
-import eduMongoDBData from "@/assets/img/project/eduf8/MongoDBDBData.png"; // if your file is "MongoDBData.png", use that exact name
+import eduMongoDBData from "@/assets/img/project/eduf8/MongoDBData.png";
 import eduShowCourseDetails from "@/assets/img/project/eduf8/ShowCourseDetails.png";
 // ---- Lotto OOP CSharp ----
 import lotto1 from "@/assets/img/project/lotto/1.png";
