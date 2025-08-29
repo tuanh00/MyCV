@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import githubLogo from "@/assets/img/about/crypto.jpg";
-import myCV from "@/assets/Huynh_Tu_Anh_Chau_CV_2025.pdf";
+import myCV from "@/assets/Huynh_Tu_Anh_Chau_CV2025.pdf";
 import { TypeAnimation } from "react-type-animation";
 import Parallax from "parallax-js";
 import logo550 from "@/assets/img/about/550x640.jpg";
