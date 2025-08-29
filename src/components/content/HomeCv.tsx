@@ -29,11 +29,11 @@ const HomeCv = () => {
                         <div className="text_typing">
                           <p>I'm a&nbsp;
                           <TypeAnimation sequence = {[
-                            'Trainee Developer',
+                            'Full-Stack Developer',
                             2000,
-                            'Front-End Developer',
+                            'Junior Developer',
                             2000,
-                            'Back-End Developer',
+                            'Automation Enthusiast',
                             2000,
                           ]}
                           wrapper = "span"

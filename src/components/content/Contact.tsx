@@ -21,8 +21,18 @@ const Contact = () => {
                       <p>
                         <label>Email:</label>
                         <span>
-                          <a href="mailto:chtuanh@gmail.com">
+                          <a style={{textDecoration: "underline"}} href="mailto:chtuanh@gmail.com">
                             chtuanh@gmail.com
+                          </a>
+                        </span>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <label>Github:</label>
+                        <span>
+                          <a style={{textDecoration: "underline"}} href="https://github.com/tuanh00">
+                            https://github.com/tuanh00
                           </a>
                         </span>
                       </p>
@@ -32,6 +42,7 @@ const Contact = () => {
                         <label>Website:</label>
                         <span>
                           <a
+                            style={{textDecoration: "underline"}}
                             href="https://portfolio-tuanh.vercel.app/"
                             target="_blank"
                           >
@@ -70,7 +81,7 @@ const Contact = () => {
           </div>
           <div className="arlo_tm_footer_wrap">
             <div className="container">
-              <p>&copy; Copyright 2024 by Tu Anh. All Rights are Reserved.</p>
+              <p>&copy; Copyright 2025 by Tu Anh. All Rights are Reserved.</p>
             </div>
           </div>
         </div>

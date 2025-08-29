@@ -112,7 +112,7 @@ const About = () => {
                       <li>
                         <span>
                           <label>Mail:</label>{" "}
-                          <a href="mailto:chtuanh@gmail.com">
+                          <a style={{textDecoration: "underline"}} href="mailto:chtuanh@gmail.com">
                             chtuanh&#64;gmail.com
                           </a>
                         </span>
