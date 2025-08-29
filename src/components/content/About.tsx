@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import githubLogo from "@/assets/img/about/crypto.jpg";
-import myCV from "@/assets/Huynh_Tu_Anh_Chau_CV_Aug.pdf";
+import myCV from "@/assets/Huynh_Tu_Anh_Chau_CV_2025.pdf";
 import { TypeAnimation } from "react-type-animation";
 import Parallax from "parallax-js";
 import logo550 from "@/assets/img/about/550x640.jpg";
@@ -77,11 +77,13 @@ const About = () => {
                   <div className="definition">
                     <p className="about-intro">
                       Junior developer skilled in React/TypeScript and Java/C#
-                      backends. Completed degree in May 2025, now pursuing full-time roles.
+                      backends. Completed degree in May 2025, now pursuing
+                      full-time roles.
                     </p>
                     <ul className="about-points">
                       <li>
-                        Happy to contribute as Full-stack or Mobile (Android, iOS).
+                        Happy to contribute as Full-stack or Mobile (Android,
+                        iOS).
                       </li>
                       <li>
                         Fast learner — if a skill isn’t in my portfolio yet, I’m
@@ -112,7 +114,10 @@ const About = () => {
                       <li>
                         <span>
                           <label>Mail:</label>{" "}
-                          <a style={{textDecoration: "underline"}} href="mailto:chtuanh@gmail.com">
+                          <a
+                            style={{ textDecoration: "underline" }}
+                            href="mailto:chtuanh@gmail.com"
+                          >
                             chtuanh&#64;gmail.com
                           </a>
                         </span>
