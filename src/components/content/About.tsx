@@ -77,21 +77,21 @@ const About = () => {
                   <div className="definition">
                     <p className="about-intro">
                       Junior developer skilled in React/TypeScript and Java/C#
-                      backends. Completed degree in May 2025, now pursuing
+                      backends. Completed degree in July 2025, now pursuing
                       full-time roles.
                     </p>
                     <ul className="about-points">
                       <li>
-                        Happy to contribute as Full-stack or Mobile (Android,
-                        iOS).
+                        Full-Stack Developer & Technical IT Analyst—comfortable
+                        across frontend, backend, data, and support.
                       </li>
                       <li>
-                        Fast learner — if a skill isn’t in my portfolio yet, I’m
-                        ready to learn it.
+                        Build & ship: responsive UIs, scalable APIs, and
+                        well-structured databases.
                       </li>
                       <li>
-                        I care about clean UI, maintainable code, and
-                        collaborative teams.
+                        Work-ready: high-performing in coursework & team
+                        projects; committed to clean, maintainable code.
                       </li>
                     </ul>
                   </div>
