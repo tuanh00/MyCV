@@ -10,7 +10,7 @@ const Skill = () => {
             <h3>Technical Skills</h3>
           </div>
 
-          {/* Mind Map */}
+            {/* Mind Map */}
           <div className="mindmap skills-mindmap">
             <div className="mm-center">
               <div className="mm-bubble">
@@ -45,8 +45,19 @@ const Skill = () => {
               </div>
             </div>
 
+            {/* NEW: Java & Spring */}
             <div className="mm-branch">
-              <h5>Data & Cloud</h5>
+              <h5>Java &amp; Spring</h5>
+              <div className="mm-chips">
+                <span>Spring Boot</span>
+                <span>Spring Data JPA</span>
+                <span>Hibernate ORM</span>
+                <span>REST API Development</span>
+              </div>
+            </div>
+
+            <div className="mm-branch">
+              <h5>Data &amp; Cloud</h5>
               <div className="mm-chips">
                 <span>SQL Server</span>
                 <span>MySQL</span>
@@ -57,7 +68,7 @@ const Skill = () => {
             </div>
 
             <div className="mm-branch">
-              <h5>APIs & Integrations</h5>
+              <h5>APIs &amp; Integrations</h5>
               <div className="mm-chips">
                 <span>Stripe</span>
                 <span>Google Calendar</span>
@@ -75,34 +86,49 @@ const Skill = () => {
               </div>
             </div>
 
+            {/* SHORTENED: Architecture -> only OOP */}
             <div className="mm-branch">
-              <h5>Architecture & Patterns</h5>
+              <h5>Architecture &amp; Patterns</h5>
               <div className="mm-chips">
-                <span>MVC</span>
-                <span>MVVM</span>
-                <span>3-Tier / Layered</span>
-                <span>Clean Architecture</span>
-                <span>RESTful API Design</span>
-                <span>Webhooks</span>
-                <span>Dependency Injection</span>
-                <span>Factory</span>
-                <span>Abstract Factory</span>
-                <span>Builder</span>
-                <span>Singleton</span>
-                <span>Strategy</span>
-                <span>Observer</span>
-                <span>State</span>
-                <span>Adapter</span>
-                <span>Repository</span>
-                <span>Service</span>
+                <span>Object-Oriented Programming (OOP)</span>
               </div>
             </div>
+
             <div className="mm-branch">
-              <h5>Quality & Principles</h5>
+              <h5>Quality &amp; Principles</h5>
               <div className="mm-chips">
                 <span>SOLID</span>
                 <span>JUnit Tests</span>
-                <span> Postman</span>
+                <span>Postman</span>
+              </div>
+            </div>
+
+            {/* NEW: DevOps & CI/CD */}
+            <div className="mm-branch">
+              <h5>DevOps &amp; CI/CD</h5>
+              <div className="mm-chips">
+                <span>CI/CD Pipelines</span>
+                <span>GitLab</span>
+                <span>Jenkins</span>
+              </div>
+            </div>
+
+            {/* NEW: IT Ops & Support */}
+            <div className="mm-branch">
+              <h5>IT Ops &amp; Support</h5>
+              <div className="mm-chips">
+                <span>Microsoft 365 (Office 365)</span>
+                <span>PowerShell</span>
+                <span>Oracle VirtualBox</span>
+              </div>
+            </div>
+
+            {/* NEW: Methodologies */}
+            <div className="mm-branch">
+              <h5>Methodologies</h5>
+              <div className="mm-chips">
+                <span>Agile</span>
+                <span>Scrum</span>
               </div>
             </div>
           </div>
@@ -112,4 +138,5 @@ const Skill = () => {
     </div>
   );
 };
+
 export default Skill;
