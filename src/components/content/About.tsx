@@ -100,7 +100,7 @@ const About = () => {
                     <ul>
                       <li>
                         <span>
-                          <label>City:</label> Montreal, QC
+                          <label>City:</label> Ho Chi Minh City, VN
                         </span>
                       </li>
                       <li>
