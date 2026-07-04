@@ -1,5 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
-import myAvatar from '@/assets/img/hero/img.png'
+import myAvatar from '@/assets/img/hero/img2.jpg'
 const HomeCv = () => {
   const handleScrollToAbout = () => {
       const section = document.querySelector("#about")
