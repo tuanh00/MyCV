@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import githubLogo from "@/assets/img/about/crypto.jpg";
+import githubLogo from "@/assets/img/about/new-ava.jpg";
 import myCV from "@/assets/Chau-Huynh-Tu-Anh--CV-2026.pdf";
 import { TypeAnimation } from "react-type-animation";
 import Parallax from "parallax-js";
