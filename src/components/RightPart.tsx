@@ -10,37 +10,15 @@ interface IProps {
   setHideLeftPart: (value: boolean) => void;
 }
 
-const RightPart = (props: IProps) => {
+const RightPart = () => {
     return(
         <>
-            <div className={props.hideLeftPart ? "arlo_tm_rightpart opened" : "arlo_tm_rightpart"}>
-            <div className="rightpart_inner">
-             {/* <!-- HOMECV --> */}
-              <HomeCv/>
-            {/* <!-- HOMECV --> */}
-
-             {/* <!-- ABOUT --> */}
-             <About/>
-             {/* <!-- /ABOUT --> */}
-              
-             {/* <!-- SKILLS --> */}
-              <Skill/>
-              {/*{/* <!-- /SKILLS --> */} 
-              
-             {/* <!-- PROJECTS --> */}
-            <Project/>
-             {/* <!-- PROJECTS --> */}
-
-             {/* <!-- CERTIFICATIONS --> */}
-            <Certification/>
-             {/* <!-- /CERTIFICATIONS --> */}
-
-             {/* <!-- CONTACT & FOOTER --> */}
-            <Contact/>
-             {/* <!-- /CONTACT & FOOTER --> */}
-              
-            </div>
-          </div>
+          <HomeCv />
+          <About />
+          <Skill />
+          <Project />
+          <Certification />
+          <Contact />
         </>
     );
 }

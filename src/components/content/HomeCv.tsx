@@ -1,61 +1,100 @@
 import { TypeAnimation } from "react-type-animation";
-import myAvatar from '@/assets/img/hero/img2.jpg'
-const HomeCv = () => {
-  const handleScrollToAbout = () => {
-      const section = document.querySelector("#about")
-      if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      
-      }
-  
-}
-    return (
-        <>
-         <div className="arlo_tm_section" id="home">
-                <div className="arlo_tm_hero_header_wrap">
-                  <div className="arlo_tm_universal_box_wrap">
-                    <div className="bg_wrap">
-                      <div className="overlay_image hero jarallax" data-speed="0.1"></div>
-                      <div className="overlay_color hero"></div>
-                    </div>
-                    <div className="content hero">
-                      <div className="inner_content">
-                        <div className="image_wrap">
-                          <img src={myAvatar} alt="My Avatar" />
-                        </div>
-                        <div className="name_holder">
-                          <h3>Huynh Tu Anh <span>Chau</span></h3>
-                        </div>
-                        <div className="text_typing">
-                          <p>I'm a&nbsp;
-                          <TypeAnimation sequence = {[
-                            'Full-Stack Developer',
-                            2000,
-                            'Junior Developer',
-                            2000,
-                            'Automation Enthusiast',
-                            2000,
-                          ]}
-                          wrapper = "span"
-                          cursor = {true}
-                          repeat = {Infinity}
-                          // style = {{ fontSize: '2em', display: 'inline-block'}}
-                          />
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="arlo_tm_arrow_wrap bounce anchor">
-                      <a href="#" onClick={(e) => {
-                        handleScrollToAbout()
-                        e.preventDefault();
 
-                      }}><i className="xcon-angle-double-down"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </>
-    );
-    }
+const HomeCv = () => {
+  const scrollToProjects = () => {
+    document
+      .querySelector("#projects")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="hero" id="home">
+      <div className="hero__background" aria-hidden="true">
+        <span className="hero__orb hero__orb--one" />
+        <span className="hero__orb hero__orb--two" />
+        <span className="hero__grid" />
+      </div>
+
+      <div className="hero__content">
+        <p className="hero__eyebrow">
+          JUNIOR FULL-STACK DEVELOPER
+        </p>
+
+        <h1 className="hero__title">
+          <span>Huynh Tu Anh Chau</span>
+        </h1>
+
+        <div className="hero__role">
+          <TypeAnimation
+            sequence={[
+              "Java & Spring Developer",
+              2200,
+              "Full-Stack Developer",
+              2200,
+              "Backend Developer",
+              2200,
+            ]}
+            wrapper="span"
+            cursor
+            repeat={Infinity}
+          />
+        </div>
+
+        <p className="hero__description">
+          I build modern web applications and REST APIs with Java,
+          Spring Boot, React, and TypeScript.
+        </p>
+
+        <div className="hero__actions">
+          <button
+            type="button"
+            className="hero__button hero__button--primary"
+            onClick={scrollToProjects}
+          >
+            View Projects
+          </button>
+
+          <a
+            className="hero__button hero__button--secondary"
+            href="/Huynh_Tu_Anh_Chau__Developer_CV_2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View CV ↗
+          </a>
+        </div>
+
+        <div className="hero__tech">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>React</span>
+          <span>TypeScript</span>
+        </div>
+      </div>
+
+      <div className="hero__network" aria-hidden="true">
+          <span className="network-node network-node--java">Java</span>
+          <span className="network-node network-node--spring">Spring Boot</span>
+          <span className="network-node network-node--api">REST API</span>
+          <span className="network-node network-node--sql">SQL</span>
+          <span className="network-node network-node--react">React</span>
+
+          <span className="network-node network-node--hibernate">Hibernate</span>
+          <span className="network-node network-node--jpa">JPA</span>
+          <span className="network-node network-node--maven">Maven</span>
+          <span className="network-node network-node--docker">Docker</span>
+          <span className="network-node network-node--git">Git</span>
+
+          <span className="network-line network-line--one" />
+          <span className="network-line network-line--two" />
+          <span className="network-line network-line--three" />
+          <span className="network-line network-line--four" />
+          <span className="network-line network-line--five" />
+          <span className="network-line network-line--six" />
+          <span className="network-line network-line--seven" />
+        </div>
+    </section>
+  );
+};
+
 export default HomeCv;

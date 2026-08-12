@@ -6,7 +6,7 @@ import { SiFigma } from "react-icons/si";
 import { PiFileCSharp } from "react-icons/pi";
 import { BsArrowRight } from "react-icons/bs";
 import { SiSwift } from "react-icons/si";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 import ImageCarousel from "@/components/ImageCarousel";
 import f1 from "@/assets/img/project/fastfood/1.jpg";
 import f2 from "@/assets/img/project/fastfood/2.png";
@@ -408,142 +408,333 @@ const Project = () => {
       },
     },
   ];
+  // ================= PROJECTS — GROUPS =================
+
+const featuredProjects = dataProjects.slice(0, 3);
+const otherProjects = dataProjects.slice(3);
   return (
-    <>
-      <Modal
-        centered
-        width={900} // desktop cap
-        wrapClassName="project-modal"
-        title={
-          dataDetails && dataDetails.title ? `Project ${dataDetails.title}` : ""
-        }
-        open={isModalOpen}
-        onOk={() => handleCloseModal()}
-        onCancel={() => handleCloseModal()}
-        footer={null}
-        maskClosable={true}
-        keyboard={true}        // allow ESC to close too
-      >
-        <ImageCarousel
-          images={dataDetails?.images ?? []}
-          altPrefix={dataDetails?.title ?? "Screenshot"}
-        />
-        {dataDetails && (
-          <ul className="project-details">
-            <li>
-              <strong>Description:</strong> {dataDetails.details.description}
-            </li>
-            <li>
-              <strong>Frontend:</strong>{" "}
-              {dataDetails.details.frontend.join(", ")}
-            </li>
-            <li>
-              <strong>Backend:</strong> {dataDetails.details.backend.join(", ")}
-            </li>
-            <li>
-              <strong>Member:</strong> {dataDetails.details.member}
-            </li>
-            <li>
-              <strong>Role:</strong> {dataDetails.details.role}
-            </li>
+  <>
+    {/* ================= PROJECTS — MODAL ================= */}
 
-            {/* Prefer array of links; fall back to single demo string */}
-            {Array.isArray(dataDetails.details.demoLinks) &&
-            dataDetails.details.demoLinks.length > 0
-              ? dataDetails.details.demoLinks.map((d, i) => (
-                  <li key={i}>
-                    <strong>
-                      Demo{d.label ? ` (${d.label})` : ` ${i + 1}`}:
-                    </strong>{" "}
-                    <a href={d.url} target="_blank" rel="noopener noreferrer">
-                      Watch flow
-                    </a>
-                  </li>
-                ))
-              : dataDetails.details.demo && (
-                  <li>
-                    <strong>Demo:</strong>{" "}
-                    <a
-                      href={dataDetails.details.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View demo
-                    </a>
-                  </li>
-                )}
+    <Modal
+      centered
+      width={950}
+      wrapClassName="project-modal"
+      title={dataDetails?.title ?? ""}
+      open={isModalOpen}
+      onCancel={handleCloseModal}
+      footer={null}
+      maskClosable
+      keyboard
+    >
+      {dataDetails && (
+        <div className="project-modal__content">
 
-            {/* Only show GitHub if not empty */}
-            {dataDetails.details.github && (
-              <li>
-                <strong>GitHub:</strong>{" "}
+          <ImageCarousel
+            images={dataDetails.images ?? []}
+            altPrefix={dataDetails.title}
+          />
+
+          <div className="project-modal__body">
+
+            <div className="project-modal__meta">
+              <span>{dataDetails.details.role}</span>
+
+              <span>
+                {dataDetails.details.member === 1
+                  ? "Individual Project"
+                  : `${dataDetails.details.member} Members`}
+              </span>
+            </div>
+
+            <p className="project-modal__description">
+              {dataDetails.details.description}
+            </p>
+
+            <div className="project-modal__stack">
+              {[
+                ...dataDetails.details.frontend,
+                ...dataDetails.details.backend,
+              ]
+                .filter((tech) => !tech.startsWith("N/A"))
+                .map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+            </div>
+
+            <div className="project-modal__actions">
+
+              {dataDetails.details.github && (
                 <a
                   href={dataDetails.details.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View repository
+                  GitHub ↗
                 </a>
-              </li>
-            )}
-          </ul>
-        )}
-      </Modal>
+              )}
 
-      <div className="arlo_tm_section" id="projects">
-        <div className="arlo_tm_services_wrap">
-          <div className="container">
-            <div className="arlo_tm_title_holder">
-              <h3>Projects</h3>
+              {dataDetails.details.demo && (
+                <a
+                  href={dataDetails.details.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live / Demo ↗
+                </a>
+              )}
+
+              {dataDetails.details.demoLinks?.map((demo, index) => (
+                <a
+                  key={demo.url}
+                  href={demo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {demo.label || `Demo ${index + 1}`} ↗
+                </a>
+              ))}
+
             </div>
-            <div className="list_wrap">
-              <ul>
-                {dataProjects.map((item, index) => {
-                  return (
-                    <li key={`${index}-project`}>
-                      <div
-                        className="inner"
-                        title="View Details"
-                        style={{ cursor: "pointer" }}
-                        onClick={() => {
-                          setDataDetails(item);
-                          showModal();
-                        }}
-                      >
-                        {/* <div className="icon">{item.image}</div> */}
-                        {item.images?.[0] ? (
-                          <div className="thumb">
-                            <img
-                              src={item.images[0]}
-                              alt={`${item.title} cover`}
-                              loading="lazy"
-                            />
-                          </div>
-                        ) : (
-                          <div className="icon">{item.image}</div>
-                        )}
-                        <div className="title_service">
-                          <h3>{item.title}</h3>
-                        </div>
-                        <div
-                          className="view_detail"
-                          style={{ padding: "5px 0" }}
-                        >
-                          <span style={{ cursor: "pointer" }}>
-                            <BsArrowRight />
-                            &nbsp; View Details
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+
           </div>
         </div>
+      )}
+    </Modal>
+
+
+    {/* ================= PROJECTS — SECTION ================= */}
+
+    <section className="projects" id="projects">
+      <div className="projects__container">
+
+
+        {/* ================= PROJECTS — HEADER ================= */}
+
+        <div className="projects__heading">
+
+          <p className="projects__eyebrow">
+            SELECTED WORK
+          </p>
+
+          <h2 className="projects__title">
+            Projects that show
+            <span> how I build.</span>
+          </h2>
+
+          <p className="projects__description">
+            A selection of full-stack, backend, mobile, and web projects
+            built individually and in teams.
+          </p>
+
+        </div>
+
+
+        {/* ================= PROJECTS — FEATURED ================= */}
+
+        <div className="projects__featured">
+
+          {featuredProjects.map((project, index) => (
+            <article
+              key={project.title}
+              className={`featured-project ${
+                index === 0 ? "featured-project--primary" : ""
+              }`}
+            >
+
+              <button
+                type="button"
+                className="featured-project__image"
+                onClick={() => {
+                  setDataDetails(project);
+                  showModal();
+                }}
+                aria-label={`View ${project.title}`}
+              >
+                {project.images?.[0] ? (
+                  <img
+                    src={project.images[0]}
+                    alt={`${project.title} preview`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="featured-project__fallback">
+                    {project.image}
+                  </div>
+                )}
+              </button>
+
+
+              <div className="featured-project__content">
+
+                <div className="featured-project__top">
+                  <span className="featured-project__index">
+                    0{index + 1}
+                  </span>
+
+                  {index === 0 && (
+                    <span className="featured-project__badge">
+                      FEATURED
+                    </span>
+                  )}
+                </div>
+
+                <h3>{project.title}</h3>
+
+                <p>
+                  {project.shortDescription}
+                </p>
+
+
+                <div className="featured-project__stack">
+
+                  {[
+                    ...project.details.frontend,
+                    ...project.details.backend,
+                  ]
+                    .filter((tech) => !tech.startsWith("N/A"))
+                    .slice(0, 5)
+                    .map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}
+
+                </div>
+
+
+                <div className="featured-project__actions">
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setDataDetails(project);
+                      showModal();
+                    }}
+                  >
+                    View Details →
+                  </button>
+
+                  {project.details.demo && (
+                    <a
+                      href={project.details.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live ↗
+                    </a>
+                  )}
+
+                  {project.details.github && (
+                    <a
+                      href={project.details.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub ↗
+                    </a>
+                  )}
+
+                </div>
+
+              </div>
+
+            </article>
+          ))}
+
+        </div>
+
+        {/* ================= PROJECTS — CONTINUE ================= */}
+
+        <div className="projects__continue" aria-hidden="true">
+          <span>↓</span>
+        </div>
+
+        {/* ================= PROJECTS — MORE PROJECTS ================= */}
+
+        <div className="projects__more">
+
+          <div className="projects__subheading">
+            <h3>More Projects</h3>
+            <span>{otherProjects.length} projects</span>
+          </div>
+
+
+          <div className="projects__grid">
+
+            {otherProjects.map((project) => (
+              <article
+                key={project.title}
+                className="project-card"
+                onClick={() => {
+                  setDataDetails(project);
+                  showModal();
+                }}
+              >
+
+                <div className="project-card__image">
+
+                  {project.images?.[0] ? (
+                    <img
+                      src={project.images[0]}
+                      alt={`${project.title} preview`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="project-card__fallback">
+                      {project.image}
+                    </div>
+                  )}
+
+                </div>
+
+
+                <div className="project-card__content">
+
+                  <p className="project-card__role">
+                    {project.details.role}
+                  </p>
+
+                  <h3>
+                    {project.title}
+                  </h3>
+
+                  <p className="project-card__description">
+                    {project.shortDescription}
+                  </p>
+
+
+                  <div className="project-card__stack">
+
+                    {[
+                      ...project.details.frontend,
+                      ...project.details.backend,
+                    ]
+                      .filter((tech) => !tech.startsWith("N/A"))
+                      .slice(0, 3)
+                      .map((tech) => (
+                        <span key={tech}>
+                          {tech}
+                        </span>
+                      ))}
+
+                  </div>
+
+
+                  <span className="project-card__link">
+                    View Project →
+                  </span>
+
+                </div>
+
+              </article>
+            ))}
+
+          </div>
+
+        </div>
+
       </div>
-    </>
-  );
+    </section>
+  </>
+);
 };
 export default Project;

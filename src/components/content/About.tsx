@@ -1,156 +1,83 @@
-import { useRef, useEffect } from "react";
-import githubLogo from "@/assets/img/about/new-ava.jpg";
-import myCV from "@/assets/Chau-Huynh-Tu-Anh--CV-2026.pdf";
-import { TypeAnimation } from "react-type-animation";
-import Parallax from "parallax-js";
-import logo550 from "@/assets/img/about/550x640.jpg";
-
 const About = () => {
-  const sceneEl = useRef(null);
-
-  useEffect(() => {
-    if (sceneEl && sceneEl.current) {
-      const parallaxInstance = new Parallax(sceneEl.current, {
-        relativeInput: true,
-        hoverOnly: true,
-      });
-
-      parallaxInstance.enable();
-      return () => parallaxInstance.disable();
-    }
-  }, []);
-
   return (
-    <>
-      <div
-        className="arlo_tm_section relative"
-        id="about"
-        style={{ paddingTop: 100 }}
-      >
-        <div className="arlo_tm_about_wrapper_all">
-          <div className="container">
-            <div className="arlo_tm_title_holder">
-              <h3>About Me</h3>
-              {/* <span>Main informations about me</span> */}
-            </div>
-            <div className="arlo_tm_about_wrap">
-              <div className="author_wrap">
-                <div className="leftbox">
-                  <div
-                    ref={sceneEl}
-                    className="about_image_wrap parallax"
-                    data-relative-input="true"
-                  >
-                    <div className="image layer" data-depth="0.2">
-                      <img src={logo550} alt="550x640" />
-                      <div
-                        className="inner"
-                        data-img-url={githubLogo}
-                        style={{ backgroundImage: `url(${githubLogo})` }}
-                      ></div>
-                    </div>
-                    <div className="border layer" data-depth="0.6">
-                      <img src={logo550} alt="550x640" />
-                      <div className="inner"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="rightbox">
-                  <div className="arlo_tm_mini_title_holder">
-                    <h4>
-                      Greetings! I am a&nbsp;
-                      <TypeAnimation
-                        sequence={[
-                          "Full-Stack Developer",
-                          2000,
-                          "Junior Developer",
-                          2000,
-                          "Automation Enthusiast",
-                          2000,
-                        ]}
-                        wrapper="span"
-                        cursor={true}
-                        repeat={Infinity}
-                      />
-                    </h4>
-                  </div>
-                  <div className="definition">
-                    <p className="about-intro">
-                      Junior developer skilled in React/TypeScript and Java/C#
-                      backends. Completed degree in July 2025, now pursuing
-                      full-time roles.
-                    </p>
-                    <ul className="about-points">
-                      <li>
-                        Full-Stack Developer & Technical IT Analyst—comfortable
-                        across frontend, backend, data, and support.
-                      </li>
-                      <li>
-                        Build & ship: responsive UIs, scalable APIs, and
-                        well-structured databases.
-                      </li>
-                      <li>
-                        Work-ready: high-performing in coursework & team
-                        projects; committed to clean, maintainable code.
-                      </li>
-                    </ul>
-                  </div>
+    <section className="about" id="about">
+      <div className="about__container">
 
-                  <div className="about_short_contact_wrap">
-                    <ul>
-                      <li>
-                        <span>
-                          <label>City:</label> Ho Chi Minh City, VN
-                        </span>
-                      </li>
-                      <li>
-                        <span>
-                          <label>Study:</label> LaSalle College
-                        </span>
-                      </li>
-                      {/* <li>
-                                <span><label>Website:</label> <a href="https://tuanh00.github.io/portfolio/" target="_blank">Check Portfolio</a></span>
-                              </li> */}
-                      <li>
-                        <span>
-                          <label>Mail:</label>{" "}
-                          <a
-                            style={{ textDecoration: "underline" }}
-                            href="mailto:chtuanh@gmail.com"
-                          >
-                            chtuanh&#64;gmail.com
-                          </a>
-                        </span>
-                      </li>
-                      {/* <li>
-                        <span>
-                          <label>LinkedIn:</label>{" "}
-                          <a
-                            href="https://www.linkedin.com/in/huynh-tu-anh-chau-8a4a251a8/"
-                            target="_blank"
-                          >
-                            Check Linkedin
-                          </a>
-                        </span>
-                      </li> */}
-                    </ul>
-                  </div>
-                  <div className="buttons_wrap">
-                    <ul>
-                      <li>
-                        <a href={myCV} download>
-                          <span>Download CV</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+        <div className="about__heading">
+          <p className="about__eyebrow">ABOUT ME</p>
+
+          <h2 className="about__title">
+            Building reliable software,
+            <span> learning fast.</span>
+          </h2>
+        </div>
+
+        <div className="about__grid">
+
+          <div className="about__intro">
+            <p>
+              I&apos;m a junior full-stack developer with a growing focus on
+              Java and Spring Boot.
+            </p>
+
+            <p>
+              I enjoy building REST APIs, structured backend systems, and
+              modern web applications using Java, React, TypeScript, and
+              relational or cloud databases.
+            </p>
+
+            <p>
+              I&apos;m currently looking for junior or graduate software
+              development opportunities where I can contribute, learn from
+              experienced engineers, and continue strengthening my backend
+              skills.
+            </p>
+          </div>
+
+          <div className="about__highlights">
+
+            <div className="about-card">
+              <span className="about-card__number">01</span>
+
+              <div>
+                <h3>Backend Focus</h3>
+                <p>
+                  Java, Spring Boot, REST APIs, JPA, Hibernate, and database
+                  development.
+                </p>
               </div>
             </div>
+
+            <div className="about-card">
+              <span className="about-card__number">02</span>
+
+              <div>
+                <h3>Full-Stack Experience</h3>
+                <p>
+                  React, TypeScript, C#, Firebase, mobile applications, and
+                  API integrations.
+                </p>
+              </div>
+            </div>
+
+            <div className="about-card">
+              <span className="about-card__number">03</span>
+
+              <div>
+                <h3>Current Direction</h3>
+                <p>
+                  Building production-style Spring projects while actively
+                  applying for junior software roles.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
-    </>
+    </section>
   );
 };
+
 export default About;
