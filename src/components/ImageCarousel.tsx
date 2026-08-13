@@ -152,12 +152,8 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
     margin-bottom: 16px;
     outline: none;
   }
-
-  .ic-wrap:focus {
-    outline: 2px solid #22d3ee;
-    outline-offset: -3px;
-  }
-
+    
+  .ic-wrap:focus-visible,
   .ic-arrow:focus-visible,
   .ic-dot:focus-visible {
     outline: 2px solid #22d3ee;

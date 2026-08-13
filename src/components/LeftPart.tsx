@@ -70,6 +70,20 @@ const LeftPart = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <header className="navbar">
       <div className="navbar__inner">
@@ -87,6 +101,7 @@ const LeftPart = () => {
           type="button"
           aria-label="Toggle navigation"
           aria-expanded={mobileOpen}
+          aria-controls="main-navigation"
           onClick={() => setMobileOpen((prev) => !prev)}
         >
           <span />
@@ -95,6 +110,7 @@ const LeftPart = () => {
         </button>
 
         <nav
+          id="main-navigation"
           className={`navbar__links ${
             mobileOpen ? "navbar__links--open" : ""
           }`}
@@ -105,6 +121,7 @@ const LeftPart = () => {
               key={section}
               href={`#${section}`}
               className={activeTab === section ? "active" : ""}
+              aria-current={activeTab === section ? "page" : undefined}
               onClick={(event) =>
                 handleClickTab(section, event)
               }
