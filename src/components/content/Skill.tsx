@@ -1,6 +1,6 @@
 const skillGroups = [
   {
-    title: "Core Backend",
+    title: "Backend",
     skills: [
       "Java",
       "Spring Boot",
@@ -23,18 +23,17 @@ const skillGroups = [
     ],
   },
   {
-    title: "Data & Cloud",
+    title: "Databases & Cloud",
     skills: [
       "SQL Server",
       "MySQL",
       "MongoDB",
-      "Oracle",
       "Firebase",
       "AWS",
     ],
   },
   {
-    title: "Development & DevOps",
+    title: "Development Tools",
     skills: [
       "Git / GitHub",
       "Docker",
@@ -50,7 +49,6 @@ const Skill = () => {
   return (
     <section className="skills" id="skills">
       <div className="skills__container">
-
         <div className="skills__heading">
           <p className="skills__eyebrow">TECHNICAL SKILLS</p>
 
@@ -69,7 +67,7 @@ const Skill = () => {
         <div className="skills__core">
           <div className="skills__core-center">
             <span>CORE</span>
-            <strong>Java + Spring</strong>
+            <strong>Java + Spring Boot</strong>
           </div>
 
           <span className="skills__orbit skills__orbit--java">
@@ -99,10 +97,7 @@ const Skill = () => {
 
         <div className="skills__grid">
           {skillGroups.map((group) => (
-            <article
-              className="skill-card"
-              key={group.title}
-            >
+            <article className="skill-card" key={group.title}>
               <h3>{group.title}</h3>
 
               <div className="skill-card__items">
@@ -113,7 +108,6 @@ const Skill = () => {
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );
