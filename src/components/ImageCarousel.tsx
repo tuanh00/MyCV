@@ -16,24 +16,6 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
     if (index >= count) setIndex(0);
   }, [count, index]);
 
-  useEffect(() => {
-    const el = frameRef.current;
-    if (!el) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (!showControls) return;
-      if (e.key === "ArrowRight") {
-        e.preventDefault();
-        setIndex((i) => (i + 1) % count);
-      }
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        setIndex((i) => (i - 1 + count) % count);
-      }
-    };
-    el.addEventListener("keydown", onKey);
-    return () => el.removeEventListener("keydown", onKey);
-  }, [showControls, count]);
-
   const onDown = (x: number) => {
     setDragging(true);
     startX.current = x;
@@ -56,15 +38,32 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
       ref={frameRef}
       tabIndex={0}
       className="ic-wrap"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label={altPrefix ? `${altPrefix} screenshots` : "Project screenshots"}
+
+      onKeyDown={(e) => {
+        if (!showControls) return;
+
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          setIndex((i) => (i + 1) % count);
+        }
+
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          setIndex((i) => (i - 1 + count) % count);
+        }
+      }}
+
       onMouseDown={(e) => onDown(e.clientX)}
       onMouseMove={(e) => onMove(e.clientX)}
       onMouseUp={onUp}
       onMouseLeave={onUp}
+
       onTouchStart={(e) => onDown(e.touches[0].clientX)}
       onTouchMove={(e) => onMove(e.touches[0].clientX)}
       onTouchEnd={onUp}
-      aria-roledescription="carousel"
-      aria-label="Project screenshots"
     >
       <div
         className="ic-track"
@@ -84,6 +83,9 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
           <div
             className="ic-slide"
             key={i}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${i + 1} of ${count}`}
             aria-hidden={!isCurrent}
           >
             {src && shouldRenderImage ? (
@@ -108,6 +110,7 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
       {showControls && (
         <>
           <button
+          type="button"
             className="ic-arrow ic-left"
             aria-label="Previous"
             onClick={() => setIndex((i) => (i - 1 + count) % count)}
@@ -115,6 +118,7 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
             ‹
           </button>
           <button
+            type="button"
             className="ic-arrow ic-right"
             aria-label="Next"
             onClick={() => setIndex((i) => (i + 1) % count)}
@@ -125,8 +129,10 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
             {images.map((_, i) => (
               <button
                 key={i}
+                type="button"
                 role="tab"
                 aria-selected={i === index}
+                aria-label={`Go to screenshot ${i + 1}`}
                 className={`ic-dot ${i === index ? "is-active" : ""}`}
                 onClick={() => setIndex(i)}
               />
@@ -145,6 +151,17 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
     background: #0f172a0d;
     margin-bottom: 16px;
     outline: none;
+  }
+
+  .ic-wrap:focus {
+    outline: 2px solid #22d3ee;
+    outline-offset: -3px;
+  }
+
+  .ic-arrow:focus-visible,
+  .ic-dot:focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
   }
 
   .ic-track { display:flex; height:100%; transition:transform .3s ease; }

@@ -425,6 +425,15 @@ const otherProjects = dataProjects.slice(3);
       footer={null}
       maskClosable
       keyboard
+      afterOpenChange={(open) => {
+        if (open) {
+          requestAnimationFrame(() => {
+            document
+              .querySelector<HTMLElement>(".project-modal .ic-wrap")
+              ?.focus();
+          });
+        }
+      }}
     >
       {dataDetails && (
         <div className="project-modal__content">
