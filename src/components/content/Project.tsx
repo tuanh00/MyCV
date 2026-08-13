@@ -664,9 +664,19 @@ const otherProjects = dataProjects.slice(3);
               <article
                 key={project.title}
                 className="project-card"
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${project.title}`}
                 onClick={() => {
                   setDataDetails(project);
                   showModal();
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setDataDetails(project);
+                    showModal();
+                  }
                 }}
               >
 

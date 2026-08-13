@@ -1808,6 +1808,11 @@ select {
   cursor: pointer;
 }
 
+.featured-project__image:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: -3px;
+}
+
 .featured-project--primary .featured-project__image {
   min-height: 380px;
 }
@@ -1976,6 +1981,11 @@ select {
   color: #22d3ee;
 }
 
+.featured-project__actions button:focus-visible,
+.featured-project__actions a:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
+}
 
 /* =========================================================
    PROJECTS — MORE
@@ -2037,6 +2047,13 @@ select {
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 4px;
+
+  border-color: rgba(34, 211, 238, 0.45);
 }
 
 .project-card:hover {
@@ -2301,6 +2318,11 @@ select {
   border-color: rgba(34, 211, 238, 0.4);
 
   color: #22d3ee;
+}
+
+.project-modal__actions a:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
 }
 
 
