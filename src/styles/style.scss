@@ -3713,50 +3713,6 @@ img.svg {
   .skills-mindmap .mm-center::after { left: 10px; right: 10px; } /* keep spine visible on small screens */
 }
 
-/* Certifications (force images to fit the box) */
-#certifications {
-    padding-bottom: clamp(56px, 8vw, 120px);
-
-  .cert-slider { width: 100%; margin: 0 auto; }
-
-  /* The box height – tweak the numbers to taste */
-  .ic-wrap {
-    height: clamp(280px, 45vw, 360px);  /* smaller on phones, not huge on desktop */
-    overflow: hidden;
-    border-radius: 10px;
-    background: #fff;
-  }
-
-  /* Make percent heights resolvable */
-  .ic-viewport { height: 100%; display: flex; }
-
-  /* Each slide fills the box and centers its content */
-  .ic-slide {
-    flex: 0 0 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 36px;               /* room for arrows; adjust if needed */
-    box-sizing: border-box;
-  }
-
-  /* Image scales down to fit, never overflows */
-  .ic-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto !important;          /* override any global img width rules */
-    height: auto !important;
-    object-fit: contain;
-    display: block;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    border-radius: 8px;
-  }
-
-  /* dots spacing (optional) */
-  .ic-dots { margin-top: 8px; }
-}
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -6082,4 +6038,594 @@ img.svg {
   color: #64748b;
   font-size: 0.85rem;
   font-weight: 500;
+}
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.certifications {
+  position: relative;
+  padding: 130px 0;
+  background: #070a0f;
+  color: #f8fafc;
+}
+
+.certifications__container {
+  width: min(88%, 1400px);
+  margin: 0 auto;
+}
+
+
+/* ================= CERTIFICATIONS — HEADER ================= */
+
+.certifications__header {
+  max-width: 820px;
+  margin-bottom: 70px;
+}
+
+.certifications__eyebrow {
+  margin: 0 0 20px;
+
+  color: #22d3ee;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.certifications__title {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5vw, 5.8rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+
+  color: #f8fafc;
+}
+
+.certifications__title span {
+  background: linear-gradient(90deg, #22d3ee, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.certifications__description {
+  max-width: 700px;
+  margin: 30px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* ================= CERTIFICATIONS — GRID ================= */
+
+.certifications__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+
+/* ================= CERTIFICATION — CARD ================= */
+
+.certification-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 22px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.35);
+}
+
+
+/* ================= CERTIFICATION — IMAGE ================= */
+
+.certification-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 260px;
+  padding: 24px;
+
+  background: #f8fafc;
+}
+
+.certification-card__image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ================= CERTIFICATION — FOOTER ================= */
+
+.certification-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 20px 24px;
+}
+
+.certification-card__number {
+  color: #22d3ee;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.certification-card__label {
+  color: #cbd5e1;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .certifications {
+    padding: 110px 0;
+  }
+
+  .certifications__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certification-card__image {
+    height: 240px;
+  }
+}
+
+
+/* =========================================================
+   CERTIFICATIONS — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .certifications {
+    padding: 90px 0;
+  }
+
+  .certifications__container {
+    width: auto;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .certifications__header {
+    margin-bottom: 48px;
+  }
+
+  .certifications__eyebrow {
+    margin-bottom: 18px;
+    font-size: 0.78rem;
+  }
+
+  .certifications__title {
+    font-size: clamp(3rem, 13vw, 4.4rem);
+    line-height: 1.03;
+  }
+
+  .certifications__description {
+    margin-top: 24px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .certifications__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .certification-card {
+    border-radius: 18px;
+  }
+
+  .certification-card__image {
+    height: 200px;
+    padding: 14px;
+  }
+
+  .certification-card__footer {
+    padding: 18px;
+  }
+}
+/* =========================================================
+   CERTIFICATIONS — ACTIONS
+   ========================================================= */
+
+.certifications__actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 36px;
+}
+
+.certifications__toggle {
+  min-height: 48px;
+  padding: 0 20px;
+
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 10px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  color: #e2e8f0;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.certifications__toggle:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(34, 211, 238, 0.4);
+
+  color: #22d3ee;
+}
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  position: relative;
+
+  padding: 130px 8% 40px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(34, 211, 238, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(139, 92, 246, 0.08),
+      transparent 30%
+    ),
+    #090d14;
+
+  color: #f8fafc;
+}
+
+.contact__container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONTACT — HEADER
+   ========================================================= */
+
+.contact__header {
+  max-width: 850px;
+
+  margin-bottom: 65px;
+}
+
+.contact__eyebrow {
+  margin: 0 0 18px;
+
+  color: #22d3ee;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.contact__title {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.contact__title span {
+  background:
+    linear-gradient(
+      90deg,
+      #22d3ee,
+      #8b5cf6
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.contact__description {
+  max-width: 720px;
+
+  margin: 24px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTACT — CARD
+   ========================================================= */
+
+.contact__card {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 0.7fr;
+
+  gap: 60px;
+
+  padding: 48px;
+
+  border:
+    1px solid rgba(148, 163, 184, 0.12);
+
+  border-radius: 24px;
+
+  background:
+    rgba(15, 23, 42, 0.5);
+}
+
+.contact__availability {
+  margin: 0 0 18px;
+
+  color: #22d3ee;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.contact__message h3 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size:
+    clamp(1.9rem, 3vw, 3rem);
+
+  line-height: 1.15;
+}
+
+.contact__message > p:last-child {
+  max-width: 650px;
+
+  margin: 22px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONTACT — ACTIONS
+   ========================================================= */
+
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.contact__button {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 56px;
+
+  padding: 0 20px;
+
+  border:
+    1px solid rgba(148, 163, 184, 0.16);
+
+  border-radius: 11px;
+
+  background:
+    rgba(2, 6, 23, 0.32);
+
+  color: #e2e8f0;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact__button:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(34, 211, 238, 0.4);
+
+  color: #22d3ee;
+}
+
+.contact__button--primary {
+  border-color: transparent;
+
+  background:
+    linear-gradient(
+      90deg,
+      #22d3ee,
+      #3b82f6,
+      #8b5cf6
+    );
+
+  color: #020617;
+}
+
+.contact__button--primary:hover {
+  color: #020617;
+
+  box-shadow:
+    0 0 28px rgba(34, 211, 238, 0.15);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 90px;
+
+  padding-top: 28px;
+
+  border-top:
+    1px solid rgba(148, 163, 184, 0.1);
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.footer strong {
+  color: #f8fafc;
+
+  font-size: 0.95rem;
+}
+
+.footer span {
+  color: #64748b;
+
+  font-size: 0.8rem;
+}
+
+.footer__right {
+  text-align: right;
+}
+
+
+/* =========================================================
+   CONTACT — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact {
+    padding:
+      110px
+      6%
+      35px;
+  }
+
+  .contact__card {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   CONTACT — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact {
+    padding:
+      90px
+      24px
+      28px;
+  }
+
+  .contact__header {
+    margin-bottom: 45px;
+  }
+
+  .contact__title {
+    font-size:
+      clamp(2.7rem, 12vw, 4rem);
+  }
+
+  .contact__card {
+    padding: 24px;
+
+    border-radius: 18px;
+  }
+
+  .contact__actions {
+    width: 100%;
+  }
+
+  .contact__button {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-top: 65px;
+  }
+
+  .footer__right {
+    text-align: left;
+  }
+
 }

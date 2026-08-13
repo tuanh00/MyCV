@@ -1,92 +1,112 @@
+import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
+
 const Contact = () => {
   return (
-    <>
-      <div className="arlo_tm_section" id="contact">
-        <div className="container">
-          <div className="arlo_tm_title_holder contact">
-            <h3>Contact Me</h3>
-            {/* <span>Get in touch with me</span> */}
-          </div>
+    <section className="contact" id="contact">
+      <div className="contact__container">
+
+        {/* ================= CONTACT — HEADER ================= */}
+
+        <div className="contact__header">
+          <p className="contact__eyebrow">LET&apos;S CONNECT</p>
+
+          <h2 className="contact__title">
+            Open to the
+            <span> next opportunity.</span>
+          </h2>
+
+          <p className="contact__description">
+             I&apos;m currently looking for junior or graduate full-stack and
+            backend development opportunities in Vietnam or New Brunswick, Canada.
+          </p>
         </div>
-        <div className="arlo_tm_footer_contact_wrapper_all">
-          <div className="arlo_tm_contact_wrap_all">
-            <div className="container">
-              <div className="leftbox">
-                <div className="arlo_tm_mini_title_holder contact">
-                  <h4>Get in Touch</h4>
-                </div>
-                <div className="short_info_wrap">
-                  <ul>
-                    <li>
-                      <p>
-                        <label>Email:</label>
-                        <span>
-                          <a style={{textDecoration: "underline"}} href="mailto:chtuanh@gmail.com">
-                            chtuanh@gmail.com
-                          </a>
-                        </span>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <label>Github:</label>
-                        <span>
-                          <a style={{textDecoration: "underline"}} href="https://github.com/tuanh00">
-                            https://github.com/tuanh00
-                          </a>
-                        </span>
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        <label>Website:</label>
-                        <span>
-                          <a
-                            style={{textDecoration: "underline"}}
-                            href="https://portfolio-tuanh.vercel.app/"
-                            target="_blank"
-                          >
-                            https://portfolio-tuanh.vercel.app/
-                          </a>
-                        </span>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="rightbox">
-                <div className="arlo_tm_contact_wrap">
-                  <div className="main_input_wrap">
-                    <div style={{ height: 200 }}></div>
-                    {/* <form action="http://frenify.com/" method="post" className="contact_form" id="contact_form">
-                              <div className="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-                              <div className="empty_notice"><span>Please Fill Required Fields</span></div>
-                              <div className="wrap">
-                                <input id="name" type="text" placeholder="Your Name" />
-                              </div>
-                              <div className="wrap">
-                                <input id="email" type="text" placeholder="Your Email" />
-                              </div>
-                              <div className="wrap">
-                                <textarea id="message" placeholder="Your Message"></textarea>
-                              </div>
-                              <div className="arlo_tm_button">
-                                <a id="send_message" href="#"><span>Send Message</span></a>
-                              </div>
-                            </form> */}
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
+        {/* ================= CONTACT — CARD ================= */}
+
+        <div className="contact__card">
+
+          <div className="contact__message">
+            <p className="contact__availability">
+              AVAILABLE FOR OPPORTUNITIES
+            </p>
+
+            <h3>
+              Have a role, project,
+              <br />
+              or conversation in mind?
+            </h3>
+
+            <p>
+              Feel free to reach out. I&apos;m always happy to connect with
+              developers, recruiters, and teams working on interesting
+              software.
+            </p>
           </div>
-          <div className="arlo_tm_footer_wrap">
-            <div className="container">
-              <p>&copy; Copyright 2025 by Tu Anh. All Rights are Reserved.</p>
-            </div>
+
+
+          <div className="contact__actions">
+
+            <a
+              className="contact__button contact__button--primary"
+              href="mailto:chtuanh@gmail.com"
+            >
+              <FaEnvelope />
+              Email Me
+            </a>
+
+            <a
+              className="contact__button"
+              href="https://www.linkedin.com/in/huynh-tu-anh-chau/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+              LinkedIn
+            </a>
+
+            <a
+              className="contact__button"
+              href="https://github.com/tuanh00"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+              GitHub
+            </a>
+
           </div>
+
         </div>
+
+
+        {/* ================= CONTACT — FOOTER ================= */}
+
+        <footer className="footer">
+
+          <div>
+            <strong>Huynh Tu Anh Chau</strong>
+
+            <span>
+              Junior Full-Stack Developer · Java &amp; Spring Focus
+            </span>
+          </div>
+
+          <div className="footer__right">
+            <span>
+              Ho Chi Minh City, Vietnam · Dieppe / Greater Moncton, NB, Canada
+          </span>
+
+            <span>
+              © {new Date().getFullYear()} Huynh Tu Anh Chau
+            </span>
+          </div>
+
+        </footer>
+
       </div>
-    </>
+    </section>
   );
 };
+
 export default Contact;
