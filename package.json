@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "antd": "5.4.6",
-    "devicon": "^2.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
@@ -20,8 +19,6 @@
   },
   "devDependencies": {
     "@types/node": "18.16.1",
-    "@types/parallax-js": "^3.1.0",
-    "@types/path-browserify": "^1.0.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",

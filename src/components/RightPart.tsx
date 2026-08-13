@@ -5,11 +5,6 @@ import Project from "./content/Project";
 import Skill from "./content/Skill";
 import Certification from "./content/Certification";
 
-interface IProps {
-  hideLeftPart: boolean;
-  setHideLeftPart: (value: boolean) => void;
-}
-
 const RightPart = () => {
     return(
         <>
