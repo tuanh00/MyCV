@@ -925,6 +925,14 @@ select {
   box-shadow: 0 0 20px rgba(34, 211, 238, 0.12);
 }
 
+.navbar__brand:focus-visible,
+.navbar__links a:focus-visible,
+.navbar__socials a:focus-visible,
+.navbar__toggle:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 3px;
+}
+
 /* =========================================================
    TABLET
    ========================================================= */
