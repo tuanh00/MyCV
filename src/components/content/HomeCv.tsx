@@ -17,7 +17,7 @@ const HomeCv = () => {
 
       <div className="hero__content">
         <p className="hero__eyebrow">
-          JUNIOR FULL-STACK DEVELOPER
+          SOFTWARE DEVELOPER · JAVA &amp; SPRING FOCUS
         </p>
 
         <h1 className="hero__title">
@@ -29,9 +29,9 @@ const HomeCv = () => {
             sequence={[
               "Java & Spring Developer",
               2200,
-              "Full-Stack Developer",
-              2200,
               "Backend Developer",
+              2200,
+              "Full-Stack Developer",
               2200,
             ]}
             wrapper="span"
@@ -67,32 +67,61 @@ const HomeCv = () => {
         <div className="hero__tech">
           <span>Java</span>
           <span>Spring Boot</span>
+          <span>REST APIs</span>
           <span>React</span>
           <span>TypeScript</span>
         </div>
       </div>
 
       <div className="hero__network" aria-hidden="true">
-          <span className="network-node network-node--java">Java</span>
-          <span className="network-node network-node--spring">Spring Boot</span>
-          <span className="network-node network-node--api">REST API</span>
-          <span className="network-node network-node--sql">SQL</span>
-          <span className="network-node network-node--react">React</span>
+        <span className="network-node network-node--java">
+          Java
+        </span>
 
-          <span className="network-node network-node--hibernate">Hibernate</span>
-          <span className="network-node network-node--jpa">JPA</span>
-          <span className="network-node network-node--maven">Maven</span>
-          <span className="network-node network-node--docker">Docker</span>
-          <span className="network-node network-node--git">Git</span>
+        <span className="network-node network-node--spring">
+          Spring Boot
+        </span>
 
-          <span className="network-line network-line--one" />
-          <span className="network-line network-line--two" />
-          <span className="network-line network-line--three" />
-          <span className="network-line network-line--four" />
-          <span className="network-line network-line--five" />
-          <span className="network-line network-line--six" />
-          <span className="network-line network-line--seven" />
-        </div>
+        <span className="network-node network-node--api">
+          REST API
+        </span>
+
+        <span className="network-node network-node--sql">
+          SQL
+        </span>
+
+        <span className="network-node network-node--react">
+          React
+        </span>
+
+        <span className="network-node network-node--hibernate">
+          Hibernate
+        </span>
+
+        <span className="network-node network-node--jpa">
+          JPA
+        </span>
+
+        <span className="network-node network-node--maven">
+          Maven
+        </span>
+
+        <span className="network-node network-node--docker">
+          Docker
+        </span>
+
+        <span className="network-node network-node--git">
+          Git
+        </span>
+
+        <span className="network-line network-line--one" />
+        <span className="network-line network-line--two" />
+        <span className="network-line network-line--three" />
+        <span className="network-line network-line--four" />
+        <span className="network-line network-line--five" />
+        <span className="network-line network-line--six" />
+        <span className="network-line network-line--seven" />
+      </div>
     </section>
   );
 };

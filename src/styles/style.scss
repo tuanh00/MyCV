@@ -2544,7 +2544,16 @@ select {
   border-color: rgba(34, 211, 238, 0.35);
 }
 
+.certification-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 
+.certification-card__category {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
 /* ================= CERTIFICATION — IMAGE ================= */
 
 .certification-card__image {

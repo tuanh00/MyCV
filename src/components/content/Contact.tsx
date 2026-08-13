@@ -16,11 +16,11 @@ const Contact = () => {
           </h2>
 
           <p className="contact__description">
-             I&apos;m currently looking for junior or graduate full-stack and
-            backend development opportunities in Vietnam or New Brunswick, Canada.
+            I&apos;m currently looking for junior or graduate software
+            development opportunities, with a focus on backend and full-stack
+            roles in Vietnam or New Brunswick, Canada.
           </p>
         </div>
-
 
         {/* ================= CONTACT — CARD ================= */}
 
@@ -38,12 +38,11 @@ const Contact = () => {
             </h3>
 
             <p>
-              Feel free to reach out. I&apos;m always happy to connect with
-              developers, recruiters, and teams working on interesting
-              software.
+              Feel free to reach out. I&apos;m happy to connect with
+              recruiters, developers, and teams building thoughtful,
+              reliable software.
             </p>
           </div>
-
 
           <div className="contact__actions">
 
@@ -79,7 +78,6 @@ const Contact = () => {
 
         </div>
 
-
         {/* ================= CONTACT — FOOTER ================= */}
 
         <footer className="footer">
@@ -88,14 +86,14 @@ const Contact = () => {
             <strong>Huynh Tu Anh Chau</strong>
 
             <span>
-              Junior Full-Stack Developer · Java &amp; Spring Focus
+              Software Developer · Java &amp; Spring Focus
             </span>
           </div>
 
           <div className="footer__right">
             <span>
               Ho Chi Minh City, Vietnam · Dieppe / Greater Moncton, NB, Canada
-          </span>
+            </span>
 
             <span>
               © {new Date().getFullYear()} Huynh Tu Anh Chau
