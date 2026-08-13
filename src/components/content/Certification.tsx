@@ -13,7 +13,7 @@ const Certification: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
 
   const visibleCertificates = useMemo(() => {
-    return showAll ? certImages : certImages.slice(0, 4);
+    return showAll ? certImages : certImages.slice(0, 3);
   }, [showAll]);
 
   return (
@@ -65,7 +65,7 @@ const Certification: React.FC = () => {
 
         {/* ================= CERTIFICATIONS — TOGGLE ================= */}
 
-        {certImages.length > 4 && (
+        {certImages.length > 3 && (
           <div className="certifications__actions">
             <button
               type="button"

@@ -680,7 +680,21 @@ const otherProjects = dataProjects.slice(3);
                     />
                   ) : (
                     <div className="project-card__fallback">
-                      {project.image}
+                      <span className="project-card__fallback-label">
+                        {project.details.backend.includes("Java")
+                          ? "JAVA"
+                          : project.details.backend.some((tech) => tech.includes("C#"))
+                          ? "C#"
+                          : "CODE"}
+                      </span>
+
+                      <div className="project-card__fallback-icon">
+                        {project.image}
+                      </div>
+
+                      <span className="project-card__fallback-text">
+                        Backend / Software Project
+                      </span>
                     </div>
                   )}
 

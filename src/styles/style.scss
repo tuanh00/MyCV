@@ -5728,10 +5728,45 @@ img.svg {
   width: 100%;
   height: 100%;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  gap: 12px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(34, 211, 238, 0.08),
+      transparent 45%
+    ),
+    #070b13;
+
+  color: #cbd5e1;
+}
+
+.project-card__fallback-label {
   color: #22d3ee;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.project-card__fallback-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: scale(1.15);
+}
+
+.project-card__fallback-text {
+  color: #64748b;
+
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .project-card__content {
