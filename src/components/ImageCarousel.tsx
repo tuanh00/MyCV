@@ -70,15 +70,39 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
         className="ic-track"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
-        {(images.length ? images : [null]).map((src, i) => (
-          <div className="ic-slide" key={i} aria-hidden={i !== index}>
-            {src ? (
-              <img src={src} alt={`${altPrefix || "Screenshot"} ${i + 1}`} />
+        {(images.length ? images : [null]).map((src, i) => {
+        const isCurrent = i === index;
+        const isPrevious =
+          count > 1 && i === (index - 1 + count) % count;
+        const isNext =
+          count > 1 && i === (index + 1) % count;
+
+        const shouldRenderImage =
+          isCurrent || isPrevious || isNext;
+
+        return (
+          <div
+            className="ic-slide"
+            key={i}
+            aria-hidden={!isCurrent}
+          >
+            {src && shouldRenderImage ? (
+              <img
+                src={src}
+                alt={`${altPrefix || "Screenshot"} ${i + 1}`}
+                loading="lazy"
+                decoding="async"
+              />
+            ) : src ? (
+              <div className="ic-placeholder" />
             ) : (
-              <div className="ic-empty">No screenshots available</div>
+              <div className="ic-empty">
+                No screenshots available
+              </div>
             )}
           </div>
-        ))}
+        );
+    })}
       </div>
 
       {showControls && (
@@ -137,6 +161,11 @@ export default function ImageCarousel({ images = [], altPrefix = "" }: Props) {
   }
 
   .ic-empty { color:#6b7280; font-size:.95rem; }
+
+  .ic-placeholder {
+    width: 100%;
+    height: 100%;
+  }
 
   .ic-arrow {
     position:absolute; top:50%; transform:translateY(-50%);

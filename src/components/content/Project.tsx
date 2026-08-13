@@ -4,7 +4,6 @@ import { FaPhp } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { SiFigma } from "react-icons/si";
 import { PiFileCSharp } from "react-icons/pi";
-import { BsArrowRight } from "react-icons/bs";
 import { SiSwift } from "react-icons/si";
 import { Modal } from "antd";
 import ImageCarousel from "@/components/ImageCarousel";
@@ -556,6 +555,7 @@ const otherProjects = dataProjects.slice(3);
                     src={project.images[0]}
                     alt={`${project.title} preview`}
                     loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="featured-project__fallback">
@@ -677,6 +677,7 @@ const otherProjects = dataProjects.slice(3);
                       src={project.images[0]}
                       alt={`${project.title} preview`}
                       loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="project-card__fallback">

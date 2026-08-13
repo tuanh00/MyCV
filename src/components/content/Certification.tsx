@@ -47,6 +47,7 @@ const Certification: React.FC = () => {
                   src={image}
                   alt={`Technical certification ${index + 1}`}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
