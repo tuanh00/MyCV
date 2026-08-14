@@ -1408,7 +1408,21 @@ select {
 
   font-size: 1rem;
 }
+/* =========================================================
+   MOBILE — KEEP CORE STACK ON ONE LINE
+   ========================================================= */
 
+@media (max-width: 520px) {
+  .skills__core-center {
+    width: 200px;
+    height: 110px;
+  }
+
+  .skills__core-center strong {
+    white-space: nowrap;
+    font-size: 0.95rem;
+  }
+}
 
 /* Orbit items */
 
